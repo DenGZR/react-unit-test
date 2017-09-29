@@ -21,10 +21,10 @@ export default class UserList extends Component {
     const users = this.sortFn(data,isASC);
 
     return (
-      <Table inverse>
+      <Table inverse className="user-list">
        <thead>
          <tr>
-           <th onClick={this.onChangeSort}>id</th>
+           <th className="user-list__theader" onClick={this.onChangeSort}>id</th>
            <th>name</th>
            <th>email</th>
            <th>phone</th>
