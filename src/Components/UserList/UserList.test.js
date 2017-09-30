@@ -57,9 +57,7 @@ describe('<UserList />', () => {
 
 
   const wrapper = mount( <UserList data={users}/> );
-
-  // console.log(wrapper.instance().sortFn(users, true));
-
+  
   describe('renders correctly ', () => {
     it('should be table ', () => {
       expect(wrapper.find('table.table-inverse')).toHaveLength(1);

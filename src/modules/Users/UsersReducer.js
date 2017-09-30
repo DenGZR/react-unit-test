@@ -1,4 +1,4 @@
-import { GET_USERS, SEARCH_USER } from './UsersActions';
+import { LOAD_USERS, SEARCH_USER } from './UsersActions';
 
 const initialState = {
   data: [],
@@ -6,7 +6,7 @@ const initialState = {
 
 const UsersReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_USERS: {      
+    case LOAD_USERS: {
       return {
           ...state,
           data: action.payload,

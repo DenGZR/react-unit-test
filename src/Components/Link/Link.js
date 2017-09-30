@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const STATUS = {
   HOVERED: 'hovered',
-  NORMAL: 'my1w-normals',
+  NORMAL: 'my-normals',
 };
 
 const styleLink = {

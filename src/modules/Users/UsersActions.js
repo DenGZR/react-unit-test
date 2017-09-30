@@ -1,8 +1,8 @@
-export const GET_USERS = 'USER/GET_ALL';
+export const LOAD_USERS = 'USER/LOAD_ALL';
 export const SEARCH_USER = 'USER/SEARCH';
 
-const getUsers = payload => ({
-  type: GET_USERS,
+const loadUsers = payload => ({
+  type: LOAD_USERS,
   payload: payload.response
 });
 
@@ -14,14 +14,14 @@ const searchUser = payload => ({
 export const fetchAllUsers = () => {
   return (dispatch, state, api) => {
     return api('users')
-      .then(response => dispatch(getUsers({ response })))
+      .then(response => dispatch(loadUsers({ response })))
       .catch((err) => {
         console.log('req user error!!!', err);
       });
   };
 };
 
-export const fetchShearchUser = (id) => {  
+export const fetchShearchUser = (id) => {
   return (dispatch, state, api) => {
     return api(`users/${id}`)
       .then(response => dispatch(searchUser({ response })))
